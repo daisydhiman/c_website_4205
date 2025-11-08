@@ -48,7 +48,7 @@
                     <li><a href="#q25">25. Enter a number from user and check it is Armstrong number or not ?</a></li>
                 </ul>
             </div>
-
+            <hr><hr>
             
 <div id="q1" >
     <h3>1. Enter a number from the user and find out the binary of that number</h3>
@@ -77,28 +77,51 @@ Enter the number : 344
     </div>
 </div>
 
-
+<hr>
 <div id="q2" >
-    <h3> 2. </h3>
+    <h3> 2. 2. Enter a number from the user and check that the number is divisible by any prime number or not ? </h3>
     <div >
         <pre><code>#include &lt;stdio.h&gt;
 
+
 int main() {
-
-
-
+    int n,i,j,flag=0,prime;
+    printf("Enter a number:");
+    scanf("%d",&n);
+    for(i=2 ;i<=n/2 ;i++) {
+        prime=1;
+        for(j=2 ; j<=i/2 ; j++) {
+            if(i%j==0) {
+                prime=0;
+                break;
+            }
+        }
+        if( prime==1 && n%i==0 ) {
+            flag=1;
+            break;
+        }
+    }
+    if( flag==1 )
+        printf("Number is divisible by a prime number");
+    else
+        printf("Number is not divisible by any prime number");
     return 0;
-}</code></pre>
+}
+</code></pre>
     </div>
     <div >
         <h4>Output :</h4>
         <pre><code>
-
+PS E:\dx\coding\c_4205_bca\source\4_ITERATE_CONTROL_STRUCTURE_LOOPS> gcc f2.c -o f2; .\f2
+Enter a number:32
+Number is divisible by a prime number
 
         </code></pre>
     </div>
 </div>
 
+
+<hr>
 <div id="q3" >
     <h3>3. Enter a number from the user and check it is a prime number or not</h3>
     <div >
@@ -134,7 +157,7 @@ enter the number :43
     </div>
 </div>
 
-
+<hr>
 <div id="q4" >
     <h3>4. Enter a number from the user and print all digits of the number in separate lines</h3>
     <div >
@@ -170,7 +193,7 @@ Enter the number : 232323
     </div>
 </div>
 
-
+<hr>
 <div id="q5" >
   <h3>5. Write a program to print your name 1 lakh times ?</h3>
   <div >
@@ -200,6 +223,8 @@ daisy</code></pre>
   </div>
 </div>
 
+
+<hr>
 <div id="q6" >
   <h3>6. Write a program to print a series 1 to 1 lakh ?</h3>
   <div >
@@ -224,7 +249,7 @@ int main() {
   </div>
 </div>
 
-
+<hr>
 <div id="q7" >
   <h3>7. Enter a number from the user and print the series from 1 to that number ?</h3>
   <div >
@@ -256,7 +281,7 @@ enter the number :6
 </div>
 
 
-
+<hr>
 <div id="q8" >
   <h3>8. Enter a number from the user and print that number 100 times ?</h3>
   <div >
@@ -285,7 +310,7 @@ enter the number :3
   </div>
 </div>
 
-
+<hr>
 <div id="q9" >
   <h3>9. Write a program to print all the odd numbers between 1 to 100 ?</h3>
   <div >
@@ -313,7 +338,7 @@ int main() {
   </div>
 </div>
 
-
+<hr>
 <div id="q10" >
   <h3>10 . Write a program print the table of 4 in the format given as below (till 20)? 4*1=4 and so on</h3>
   <div >
@@ -348,6 +373,8 @@ PS E:\dx\Coding\C_4205_BCA\source\4_iterate_control_structure_loops&gt; gcc f10.
   </div>
 </div>
 
+
+<hr>
 <div id="q11" >
   <h3>11 . Enter the number from user and reverse the number?</h3>
   <div >
@@ -382,7 +409,7 @@ enter the number :34334
   </div>
 </div>
 
-
+<hr>
 <div id="q12" >
   <h3>12 . Enter a number from the user if the user enter 1 then you will perform addition operation by entering 2 number from user add it and display answer.</h3>
   <div >
@@ -428,7 +455,7 @@ the multiplication of the number is 7656</code></pre>
   </div>
 </div>
 
-
+<hr>
 <div id="q13" >
   <h3>13 . Enter the number from user and check its palindrome or not?</h3>
   <div >
@@ -465,7 +492,7 @@ enter the number :121
 yes the number is palindrom number </code></pre>
   </div>
 </div>
-
+<hr>
 <div id="q14" >
   <h3>14. Enter two numbers from users, one is base and second is power. Write the result ?</h3>
   <div >
@@ -502,7 +529,7 @@ Result is  12167</code></pre>
   </div>
 </div>
 
-
+<hr>
 <div id="q15" >
   <h3>15. Enter a number from user and print first digit of number ?</h3>
   <div >
@@ -533,7 +560,7 @@ The first digit is: 2</code></pre>
   </div>
 </div>
 
-
+<hr>
 <div id="q16" >
   <h3>16. Enter a number from user and print total from 0 to that number ?</h3>
   <div >
@@ -561,7 +588,7 @@ enter the number :234
 </div>
 
 
-
+<hr>
 <div id="q17" >
   <h3>17. Enter a number from user and find out factorial of that number ?</h3>
   <div >
@@ -594,7 +621,7 @@ Factorial of 4 is :  24</code></pre>
   </div>
 </div>
 
-
+<hr>
 <div id="q18" >
   <h3>18. Enter two numbers from user and print range from first number to second number ?</h3>
   <div >
@@ -624,6 +651,8 @@ the range from 34 to 56 is 24</code></pre>
   </div>
 </div>
 
+
+<hr>
 <div id="q19" >
   <h3>19. Enter password from user maximum 20 digits / character press enter key if you want to exit ?</h3>
   <div >
@@ -656,7 +685,7 @@ Enter the password (press Enter to exit):password</code></pre>
 </div>
 
 
-
+<hr>
 <div id="q20" >
   <h3>20. Write a program to print the counting 1 to 100 with one second delay ?</h3>
   <div >
@@ -681,6 +710,9 @@ OUTPUTS
   </div>
 </div>
 
+
+
+<hr>
 <div id="q21" >
   <h3>21. Write a program to find out the Fibonacci series / 1 to 100 (like 0 1 1 2 3 5 8 13………..)?</h3>
   <div >
@@ -711,7 +743,7 @@ enter the numebr of term :5
 </div>
 
 
-
+<hr>
 <div id="q22" >
   <h3>22. Enter a character from user and that character should be alphabet?</h3>
   <div >
@@ -739,7 +771,7 @@ Not alphabet</code></pre>
 
         </div>
     </div>
-
+    <hr><hr>
     <footer>
         <p>DAISY DHIMAN BCA 4205/25 SEC A</p>
     </footer>
