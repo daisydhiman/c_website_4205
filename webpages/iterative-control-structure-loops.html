@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITERATIVE CONTROL STRUCTURE (LOOPS) - BCA 4205/25 Daisy Dhiman</title>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div><a href="#">C Language Questions</a></div>
+    <nav class="simple-nav">
+        <div class="nav-logo"><a href="#">C Language Questions</a></div>
       </nav>
       
 
-    <div>
-        <a href="../index.html">&larr; Back to Home</a>
+    <div class="container">
+        <a href="../index.html" class="back-link">&larr; Back to Home</a>
 
-        <div>
+        <div class="questions-page">
             <h1>ITERATIVE CONTROL STRUCTURE (LOOPS)</h1>
 
-            <div>
+            <div class="question-index">
                 <h2>Questions List</h2>
                 <ul>
                     <li><a href="#q1">1. Enter a number from the user and find out the binary of that number ?</a></li>
@@ -48,28 +48,28 @@
                     <li><a href="#q25">25. Enter a number from user and check it is Armstrong number or not ?</a></li>
                 </ul>
             </div>
-            <hr><hr>
+
             
-<div id="q1" >
+<div id="q1" class="question-section">
     <h3>1. Enter a number from the user and find out the binary of that number</h3>
-    <div >
+    <div class="answer-box">
         <pre><code>#include &lt;stdio.h&gt;
 
 int main() {
-    int n, b[32], i=0;
+    int n, b[32], i = 0;
     printf("Enter the number : "); 
     scanf("%d", &n);
-    while (n>0) {
-        b[i]=n%2;
-        n=n/2;
+    while (n > 0) {
+        b[i] = n % 2;
+        n = n / 2;
         i++;
     }
-    for (i=i-1; i>=0; i--)
+    for (i = i - 1; i >= 0; i--)
         printf("%d", b[i]);
     return 0;
 }</code></pre>
     </div>
-    <div >
+    <div class="answer-box">
         <h4>Output :</h4>
         <pre><code>PS E:\dx\Coding\C_4205_BCA\source\4_iterate_control_structure_loops&gt; gcc f1.c -o f1; .\f1
 Enter the number : 344
@@ -77,67 +77,44 @@ Enter the number : 344
     </div>
 </div>
 
-<hr>
-<div id="q2" >
-    <h3> 2. 2. Enter a number from the user and check that the number is divisible by any prime number or not ? </h3>
-    <div >
+
+<div id="q2" class="question-section">
+    <h3> 2. </h3>
+    <div class="answer-box">
         <pre><code>#include &lt;stdio.h&gt;
 
-
 int main() {
-    int n,i,j,flag=0,prime;
-    printf("Enter a number:");
-    scanf("%d",&n);
-    for(i=2 ;i<=n/2 ;i++) {
-        prime=1;
-        for(j=2 ; j<=i/2 ; j++) {
-            if(i%j==0) {
-                prime=0;
-                break;
-            }
-        }
-        if( prime==1 && n%i==0 ) {
-            flag=1;
-            break;
-        }
-    }
-    if( flag==1 )
-        printf("Number is divisible by a prime number");
-    else
-        printf("Number is not divisible by any prime number");
+
+
+
     return 0;
-}
-</code></pre>
+}</code></pre>
     </div>
-    <div >
+    <div class="answer-box">
         <h4>Output :</h4>
         <pre><code>
-PS E:\dx\coding\c_4205_bca\source\4_ITERATE_CONTROL_STRUCTURE_LOOPS> gcc f2.c -o f2; .\f2
-Enter a number:32
-Number is divisible by a prime number
+
 
         </code></pre>
     </div>
 </div>
 
-
-<hr>
-<div id="q3" >
+<div id="q3" class="question-section">
     <h3>3. Enter a number from the user and check it is a prime number or not</h3>
-    <div >
+    <div class="answer-box">
         <pre><code>#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
 
 int main() {
-    int n,count=0, i;
+    int n, count = 0, i;
     printf("enter the number :");
-    scanf("%d",&n);
+    scanf("%d", &n);
 
-    if (n&lt;=1)
+    if (n &lt;= 1)
         printf("%d is not a prime number", n);
     else
-        for (i=1; i &lt;= n; i++) {
-            if (n%i==0)
+        for (i = 1; i &lt;= n; i++) {
+            if (n % i == 0)
                 count++;
         }
 
@@ -149,7 +126,7 @@ int main() {
     return 0;
 }</code></pre>
     </div>
-    <div >
+    <div class="answer-box">
         <h4>Output :</h4>
         <pre><code>PS E:\dx\Coding\C_4205_BCA\source\4_iterate_control_structure_loops&gt; gcc f3.c -o f3; .\f3
 enter the number :43
@@ -157,30 +134,30 @@ enter the number :43
     </div>
 </div>
 
-<hr>
-<div id="q4" >
+
+<div id="q4" class="question-section">
     <h3>4. Enter a number from the user and print all digits of the number in separate lines</h3>
-    <div >
+    <div class="answer-box">
         <pre><code>#include &lt;stdio.h&gt;
 
 int main() {
-    int n,r,rev=0;
+    int n, r, rev = 0;
     printf("Enter the number : ");
     scanf("%d", &n);
     while (n &gt; 0) {
-        r=n%10;
-        rev=rev*10 + r;
-        n = n/10;
+        r = n % 10;
+        rev = rev * 10 + r;
+        n = n / 10;
     }
     while (rev &gt; 0) {
-        r = rev%10;
+        r = rev % 10;
         printf("%d\n", r);
-        rev = rev/10;
+        rev = rev / 10;
     }
     return 0;
 }</code></pre>
     </div>
-    <div >
+    <div class="answer-box">
         <h4>Output :</h4>
         <pre><code>PS E:\dx\Coding\C_4205_BCA\source\4_iterate_control_structure_loops&gt; gcc f4.c -o f4; .\f4
 Enter the number : 232323
@@ -193,10 +170,10 @@ Enter the number : 232323
     </div>
 </div>
 
-<hr>
-<div id="q5" >
+
+<div id="q5" class="question-section">
   <h3>5. Write a program to print your name 1 lakh times ?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include &lt;stdio.h&gt;
 
 int main()
@@ -206,14 +183,14 @@ int main()
     printf("enetr your name :");
     gets(name);
 
-    for(i=1; i &lt;= 100000; i++)
+    for(i = 1; i &lt;= 100000; i++)
     {
         printf("%s\n", name);
     }
     return 0;
 }</code></pre>
   </div>
-  <div >
+  <div class="answer-box">
     <h4>Output :</h4>
     <pre><code>PS E:\dx\Coding\C_4205_BCA\source\4_iterate_control_structure_loops&gt; gcc f5.c -o f5; .\f5
 enetr your name :daisy
@@ -223,23 +200,21 @@ daisy</code></pre>
   </div>
 </div>
 
-
-<hr>
-<div id="q6" >
+<div id="q6" class="question-section">
   <h3>6. Write a program to print a series 1 to 1 lakh ?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
 
 int main() {
     int i;
-    for(i=1; i &lt;= 100000; i++)
+    for(i = 1; i &lt;= 100000; i++)
         printf("%d\n", i);
 
     return 0;
 }</code></pre>
   </div>
-  <div >
+  <div class="answer-box">
     <h4>Output :</h4>
     <pre><code>PS E:\dx\Coding\C_4205_BCA\source\4_iterate_control_structure_loops&gt; gcc f6.c -o f6; .\f6
 1
@@ -249,10 +224,10 @@ int main() {
   </div>
 </div>
 
-<hr>
-<div id="q7" >
+
+<div id="q7" class="question-section">
   <h3>7. Enter a number from the user and print the series from 1 to that number ?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
 
@@ -261,13 +236,13 @@ int main() {
     printf("enter the number :");
     scanf("%d", &x);
   
-    for(i=1; i &lt;= x; i++) {
+    for(i = 1; i &lt;= x; i++) {
         printf("%d\n", i);
     }
     return 0;
 }</code></pre>
   </div>
-  <div >
+  <div class="answer-box">
     <h4>Output :</h4>
     <pre><code>PS E:\dx\Coding\C_4205_BCA\source\4_iterate_control_structure_loops&gt; gcc f7.c -o f7; .\f7
 enter the number :6 
@@ -281,10 +256,10 @@ enter the number :6
 </div>
 
 
-<hr>
-<div id="q8" >
+
+<div id="q8" class="question-section">
   <h3>8. Enter a number from the user and print that number 100 times ?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
 
@@ -293,13 +268,13 @@ int main() {
     printf("enter the number :");
     scanf("%d", &x);
 
-    for(i=1; i &lt;= 100; i++) {
+    for(i = 1; i &lt;= 100; i++) {
         printf("%d\n", x);
     }
     return 0;
 }</code></pre>
   </div>
-  <div >
+  <div class="answer-box">
     <h4>Output :</h4>
     <pre><code>PS E:\dx\Coding\C_4205_BCA\source\4_iterate_control_structure_loops&gt; gcc f8.c -o f8; .\f8
 enter the number :3
@@ -310,22 +285,22 @@ enter the number :3
   </div>
 </div>
 
-<hr>
-<div id="q9" >
+
+<div id="q9" class="question-section">
   <h3>9. Write a program to print all the odd numbers between 1 to 100 ?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
 
 int main() {
     int i;
-    for(i=1; i &lt;= 100; i+=2) {
+    for(i = 1; i &lt;= 100; i += 2) {
         printf("%d\n", i);
     }
     return 0;
 }</code></pre>
   </div>
-  <div >
+  <div class="answer-box">
     <h4>Output :</h4>
     <pre><code>PS E:\dx\Coding\C_4205_BCA\source\4_iterate_control_structure_loops&gt; gcc f9.c -o f9; .\f9
 1
@@ -338,10 +313,10 @@ int main() {
   </div>
 </div>
 
-<hr>
-<div id="q10" >
+
+<div id="q10" class="question-section">
   <h3>10 . Write a program print the table of 4 in the format given as below (till 20)? 4*1=4 and so on</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include&lt;stdio.h&gt;
 
 
@@ -373,11 +348,9 @@ PS E:\dx\Coding\C_4205_BCA\source\4_iterate_control_structure_loops&gt; gcc f10.
   </div>
 </div>
 
-
-<hr>
-<div id="q11" >
+<div id="q11" class="question-section">
   <h3>11 . Enter the number from user and reverse the number?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
 
@@ -409,10 +382,10 @@ enter the number :34334
   </div>
 </div>
 
-<hr>
-<div id="q12" >
+
+<div id="q12" class="question-section">
   <h3>12 . Enter a number from the user if the user enter 1 then you will perform addition operation by entering 2 number from user add it and display answer.</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>// if user enter 2 then subtract or if user enter 3 then multiply or if user enter 4 then divide or if user enter 5 then modulo or if any other number then print invalid .
 // if user want to quit the program then user will enter Q. ?
 #include&lt;stdio.h&gt;
@@ -455,10 +428,10 @@ the multiplication of the number is 7656</code></pre>
   </div>
 </div>
 
-<hr>
-<div id="q13" >
+
+<div id="q13" class="question-section">
   <h3>13 . Enter the number from user and check its palindrome or not?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include&lt;stdio.h&gt;
 
 int main(){
@@ -492,10 +465,10 @@ enter the number :121
 yes the number is palindrom number </code></pre>
   </div>
 </div>
-<hr>
-<div id="q14" >
+
+<div id="q14" class="question-section">
   <h3>14. Enter two numbers from users, one is base and second is power. Write the result ?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include&lt;stdio.h&gt;
 
 int main(){
@@ -529,10 +502,10 @@ Result is  12167</code></pre>
   </div>
 </div>
 
-<hr>
-<div id="q15" >
+
+<div id="q15" class="question-section">
   <h3>15. Enter a number from user and print first digit of number ?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include &lt;stdio.h&gt;
 
 int main() {
@@ -560,10 +533,10 @@ The first digit is: 2</code></pre>
   </div>
 </div>
 
-<hr>
-<div id="q16" >
+
+<div id="q16" class="question-section">
   <h3>16. Enter a number from user and print total from 0 to that number ?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include&lt;stdio.h&gt;
 
 int main(){
@@ -588,15 +561,15 @@ enter the number :234
 </div>
 
 
-<hr>
-<div id="q17" >
+
+<div id="q17" class="question-section">
   <h3>17. Enter a number from user and find out factorial of that number ?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include &lt;stdio.h&gt;
 
 int main() {
     int num;
-    int factorial=1; 
+    int factorial = 1; 
 
     printf("Enter the number : ");
     scanf("%d", &num);
@@ -604,7 +577,7 @@ int main() {
     if (num &lt; 0) {
         printf("Factorial is not defined for negative numbers");
     } else {
-        for (int i=1; i &lt;= num; i++) {
+        for (int i = 1; i &lt;= num; i++) {
             factorial *= i;
         }
         printf("Factorial of %d is :  %d", num, factorial);
@@ -621,10 +594,10 @@ Factorial of 4 is :  24</code></pre>
   </div>
 </div>
 
-<hr>
-<div id="q18" >
+
+<div id="q18" class="question-section">
   <h3>18. Enter two numbers from user and print range from first number to second number ?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include &lt;stdio.h&gt;
 
 int main(){
@@ -651,26 +624,24 @@ the range from 34 to 56 is 24</code></pre>
   </div>
 </div>
 
-
-<hr>
-<div id="q19" >
+<div id="q19" class="question-section">
   <h3>19. Enter password from user maximum 20 digits / character press enter key if you want to exit ?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
 
 int main() {
     char ch;
-    int i=0;
+    int i = 0;
 
     printf("Enter the password (press Enter to exit):");
 
     while (1) {
-        ch=getche();     
-        if (ch==13)        
+        ch = getche();     
+        if (ch == 13)        
             break;
         i++;
-        if (i>=20)
+        if (i >= 20)
             break;
     }
 
@@ -685,10 +656,10 @@ Enter the password (press Enter to exit):password</code></pre>
 </div>
 
 
-<hr>
-<div id="q20" >
+
+<div id="q20" class="question-section">
   <h3>20. Write a program to print the counting 1 to 100 with one second delay ?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include &lt;stdio.h&gt;
 #include &lt;dos.h&gt;
 
@@ -710,26 +681,23 @@ OUTPUTS
   </div>
 </div>
 
-
-
-<hr>
-<div id="q21" >
+<div id="q21" class="question-section">
   <h3>21. Write a program to find out the Fibonacci series / 1 to 100 (like 0 1 1 2 3 5 8 13………..)?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include &lt;stdio.h&gt;
 
 int main()
 {
-    int x,a=0,b=1,c,i; 
+    int x, a = 0, b = 1, c, i; 
     printf("enter the number of terms :");
     scanf("%d", &x);
 
-    for(i=1; i &lt;= x; i++)
+    for(i = 1; i &lt;= x; i++)
     {
         printf("%d  ", a);
-        c=a+b;
-        a=b;
-        b=c;
+        c = a + b;
+        a = b;
+        b = c;
     } 
     return 0;
 }
@@ -743,10 +711,10 @@ enter the numebr of term :5
 </div>
 
 
-<hr>
-<div id="q22" >
+
+<div id="q22" class="question-section">
   <h3>22. Enter a character from user and that character should be alphabet?</h3>
-  <div >
+  <div class="answer-box">
     <pre><code>#include &lt;stdio.h&gt;
 
 int main() {
@@ -771,7 +739,7 @@ Not alphabet</code></pre>
 
         </div>
     </div>
-    <hr><hr>
+
     <footer>
         <p>DAISY DHIMAN BCA 4205/25 SEC A</p>
     </footer>
